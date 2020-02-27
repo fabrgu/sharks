@@ -54,7 +54,11 @@ const handleCorrectGuess = (letter) => {
  */
 const handleWrongGuess = () => {
   if (numWrong === 5){
-
+    $("#play-again").fadeIn(4000);
+    const buttons = $("button");
+    buttons.each((index, button) => {
+      $(button).attr("disabled", true);
+    });
   }
   else {
     numWrong ++ 
